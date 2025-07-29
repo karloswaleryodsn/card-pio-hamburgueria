@@ -1,0 +1,378 @@
+/* Animações para a tela de carregamento */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+/* Animações de entrada para seções */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+        @keyframes fadeInDelay {
+            0% {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .animate-fade-in-delay-2 {
+            animation: fadeInDelay 0.8s ease-out 0.4s both;
+          }
+
+          /* Efeitos de hover personalizados */
+          .info-card {
+            transition: all 0.3s ease;
+          }
+
+          .info-card:hover {
+            transform: scale(1.05);
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 25px rgb(221 168 87);
+          }
+
+          .info-card .icon {
+            transition: transform 0.5s ease, color 0.3s ease;
+          }
+
+          .info-card .text {
+            transition: transform 0.2s ease, color 0.2s ease;
+          }
+
+          /* Animações específicas para cada ícone */
+          .info-card:hover .clock-icon {
+            animation: spin 1s linear infinite;
+          }
+
+          .info-card:hover .phone-icon {
+            animation: bounce 0.6s ease-in-out infinite;
+          }
+
+          .info-card:hover .heart-icon {
+            animation: pulse 1s ease-in-out infinite;
+            color: #ffea8d;
+          }
+
+          /* Efeito no texto */
+          .info-card:hover .text {
+            transform: translateX(4px);
+          }
+
+          .info-card:hover .heart-text {
+            color: #ffea8d;
+          }
+
+          /* Keyframes para as animações */
+          @keyframes spin {
+            from {
+              transform: rotate(0deg);
+            }
+
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes bounce {
+
+            0%,
+            20%,
+            53%,
+            80%,
+            100% {
+              transform: translateY(0);
+            }
+
+            40%,
+            43% {
+              transform: translateY(-8px);
+            }
+
+            70% {
+              transform: translateY(-4px);
+            }
+
+            90% {
+              transform: translateY(-2px);
+            }
+          }
+
+          @keyframes pulse {
+
+            0%,
+            100% {
+              transform: scale(1);
+            }
+
+            50% {
+              transform: scale(1.1);
+            }
+          }
+
+          /* Efeito adicional de brilho */
+          .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgb(221 168 87) transparent);
+            transition: left 0.5s;
+            border-radius: 9999px;
+          }
+
+          .info-card:hover::before {
+            left: 100%;
+          }
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-fade-in-delay-1 {
+  animation: fade-in 1s ease-out 0.5s forwards;
+  opacity: 0; /* Garante que esteja oculto antes da animação */
+}
+
+.animate-fade-in-delay-2 {
+  animation: fade-in 1s ease-out 0.7s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-3 {
+  animation: fade-in 1s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+/* Animação de slide-in-up */
+@keyframes slide-in-up {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+/* Animação de fundo para a seção Hero */
+@keyframes bg-pan {
+  0% {
+    background-position: 0% 0%;
+    background-size: 400% 400%;
+  }
+  25% {
+    background-position: 50% 100%;
+    background-size: 450% 450%;
+  }
+  50% {
+    background-position: 100% 0%;
+    background-size: 400% 400%;
+  }
+  75% {
+    background-position: 0% 50%;
+    background-size: 450% 450%;
+  }
+  100% {
+    background-position: 0% 0%;
+    background-size: 400% 400%;
+  }
+}
+
+.animate-bg-pan {
+  animation: bg-pan 20s linear infinite alternate; /* Mais lento e suave */
+}
+
+/* Animação de rotação no hover para o hambúrguer do header */
+.animate-spin-on-hover:hover {
+  animation: spin-slow 0.5s linear; /* Reutiliza a animação de spin */
+}
+
+/* Animação de bounce para o carrinho vazio */
+@keyframes bounce-slow {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+/* Animações para elementos que aparecem ao rolar */
+.animate-fade-in-on-scroll {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(50px);
+}
+
+.animate-fade-in-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-fade-in-on-scroll-delay-1 {
+  opacity: 0;
+  transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+  transform: scale(0.9);
+}
+
+.animate-fade-in-on-scroll-delay-1.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Estilos para o card de item do menu */
+.menu-item-card {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.menu-item-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 22px -9px rgb(221 168 87), 0 8px 10px -6px rgb(221 168 87);
+  border-color: rgb(221 168 87);
+}
+
+/* Estilos para o botão de adicionar ao carrinho */
+.add-to-cart-button {
+  transition: transform 0.2s ease-out;
+}
+
+.add-to-cart-button:hover {
+  transform: scale(1.02);
+}
+
+.add-to-cart-button:active {
+  transform: scale(0.98);
+}
+
+/* Estilos para o badge de popular */
+.popular-badge {
+  animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+  transform: rotate(-12deg) scale(0);
+}
+
+@keyframes pop-in {
+  to {
+    transform: rotate(-12deg) scale(1);
+  }
+}
+
+/* Estilos para os botões de categoria */
+.category-button {
+  transition: all 0.3s ease-in-out;
+}
+
+.category-button:hover {
+  transform: scale(1.05) translateY(-2px);
+}
+
+.category-button:active {
+  transform: scale(0.95);
+}
+
+/* Estilos para os botões de quantidade do carrinho */
+.quantity-button {
+  transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.quantity-button:active {
+  transform: scale(0.95);
+}
+
+/* Estilos para o botão de remover do carrinho */
+.remove-item-button {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.remove-item-button:hover {
+  background-color: rgb(221 168 87);
+}
+
+/* Estilos para o item do carrinho */
+.cart-item-card {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Estilos para o overlay do carrinho */
+#cart-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.to-yellow-600 {
+    --tw-gradient-to: rgb(221 168 87) var(--tw-gradient-to-position);
+}
+
+.to-yellow-600:hover {
+    --tw-gradient-to: rgb(221 168 87) var(--tw-gradient-to-position);
+}
+
+.from-red-600 {
+    --tw-gradient-from:  rgb(221 168 87) var(--tw-gradient-from-position); 
+}
+.from-red-600:hover {
+    --tw-gradient-from:  rgb(221 168 87) var(--tw-gradient-from-position); 
+}
+
+.text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgb(221 168 87);
+}
+
+.border-gray-700 {
+    --tw-border-opacity: 1;
+    border-color: rgb(221 168 87);
+}
+
+.via-gray-900 {
+   --tw-gradient-to: rgb(221 168 87) var(--tw-gradient-to-position);
+}
+.from-red-600\/20{
+  --tw-gradient-stops: rgb(221 168 87), #695c12;
+}
+
+.bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / 45%);;
+}
+
+.to-yellow-900 {
+    --tw-gradient-to: rgb(221 168 87) var(--tw-gradient-to-position);
+}
