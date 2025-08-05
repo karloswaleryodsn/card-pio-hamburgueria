@@ -536,7 +536,7 @@ Obrigado pela preferência! 🙏
 *The Rua - Hambúrguer Artesanal*`
 
     // Substitua '5511999999999' pelo número de WhatsApp real da hamburgueria
-    const whatsappUrl = `https://wa.me/5522997140245?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/5522999999999?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   })
 
