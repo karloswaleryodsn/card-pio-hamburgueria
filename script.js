@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 17,
-      name: "The Rua",
+      name: "hamburguer",
       description:
         "Pão, carne, ovo, calabresa, bacon, frango desfiado, queijo, presunto, catupiry, salada e batata palha",
       price: 19.0,
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 18,
-      name: "The Rua Duplo",
+      name: "hamburguer Duplo",
       description:
         "Pão, 2 carnes, 2 ovos, calabresa, bacon, frango desfiado, 2 queijos, 2 presuntos, salada e batata palha",
       price: 26.0,
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 19,
-      name: "The Rua Picanha",
+      name: "hamburguer Picanha",
       description:
         "Pão, carne sabor picanha 90g, ovo, calabresa, bacon, frango desfiado, queijo, presunto, catupiry, salada e batata palha",
       price: 23.0,
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: 27,
-      name: "Artesanal The Rua",
+      name: "Artesanal hamburguer",
       description: "Pão, carne bovina 90g, frango desfiado, bacon, queijo, creme cheese e salada",
       price: 24.90,
       category: "artesanal",
@@ -536,7 +536,7 @@ Obrigado pela preferência! 🙏
 *The Rua - Hambúrguer Artesanal*`
 
     // Substitua '5511999999999' pelo número de WhatsApp real da hamburgueria
-    const whatsappUrl = `https://wa.me/5522999999999?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   })
 
